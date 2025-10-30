@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController controller;
     private Vector3 velocity;
     private float xRotation = 0f;
+    [SerializeField] private AudioClip[] m_FootstepSounds;
 
     void Start()
     {
