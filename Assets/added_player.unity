@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 1301255698}
   - component: {fileID: 1301255697}
   m_Layer: 0
-  m_Name: dead_cam
+  m_Name: dead_camm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
