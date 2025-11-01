@@ -18,9 +18,11 @@ public class NetworkPlayer : NetworkBehaviour
             return;
         }
 
-        // Local player: ensure camera is ON
+        Debug.Log("isowner?: " + IsOwner);
         if (IsOwner)
         {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             playerCamera.gameObject.SetActive(true);
         }
         // Remote player: ensure camera is OFF
