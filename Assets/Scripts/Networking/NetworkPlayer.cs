@@ -8,7 +8,7 @@ public class NetworkPlayer : NetworkBehaviour
     public float speed = 6f;
     private CharacterController controller;
 
-    public override void OnNetworkSpawn()
+    void Start()
     {
         controller = GetComponent<CharacterController>();
 
@@ -43,10 +43,5 @@ public class NetworkPlayer : NetworkBehaviour
 
         Vector3 move = transform.right * h + transform.forward * v;
         controller.Move(move * speed * Time.deltaTime);
-
-        if (IsOwner)
-            Debug.DrawRay(transform.position, transform.forward * 2f, Color.green);
-        else
-            Debug.DrawRay(transform.position, transform.forward * 2f, Color.red);
     }
 }
