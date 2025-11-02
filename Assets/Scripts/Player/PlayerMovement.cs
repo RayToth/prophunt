@@ -1,7 +1,9 @@
+using System.Globalization;
+using Unity.Netcode;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 6f;
@@ -25,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (!IsOwner) return;
+
         Move();
         Look();
     }
