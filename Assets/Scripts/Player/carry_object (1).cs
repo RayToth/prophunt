@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Camera))]
+[RequireComponent(typeof(Player))]
 public class CarryObject : MonoBehaviour
 {
     [Header("Pick settings")]
