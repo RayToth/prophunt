@@ -6,7 +6,9 @@ TagManager:
   tags:
   - dead_player
   - alive_palyer
+  - pistolbullet
   - pistol_bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX

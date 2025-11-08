@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public int health = 100;
 
@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     private void OncollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("pistol_bullet"))
+        if (collision.gameObject.CompareTag("bullet"))
             TakeDamage();
     }
 }

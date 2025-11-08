@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class shoot_mechanic : MonoBehaviour
+public class GunShoot : MonoBehaviour
 {
     [SerializeField] private GameObject referenceProjectile;
     [SerializeField] private Transform barrel;
