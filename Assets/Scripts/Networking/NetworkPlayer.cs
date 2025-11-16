@@ -7,6 +7,7 @@ public class NetworkPlayer : NetworkBehaviour
     public Camera playerCamera;
     public float speed = 6f;
     private CharacterController controller;
+    public static bool MenuOpen = true;
 
     void Start()
     {
@@ -21,8 +22,6 @@ public class NetworkPlayer : NetworkBehaviour
         Debug.Log("isowner?: " + IsOwner);
         if (IsOwner)
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
             playerCamera.gameObject.SetActive(true);
         }
         // Remote player: ensure camera is OFF

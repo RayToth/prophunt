@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Threading.Tasks;
+using UnityEditor.Analytics;
+using UnityEngine.Timeline;
 
 public class RelayUI : MonoBehaviour
 {
@@ -11,25 +13,16 @@ public class RelayUI : MonoBehaviour
     public GameObject mainPanel; // the whole menu panel
     private RelayManager relayManager;
 
+    public static bool MenuOpen = true;
     void Start()
     {
-        relayManager = FindObjectOfType<RelayManager>();
-
-        // Make sure cursor is unlocked and visible for menu
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        ShowMenu();
     }
 
 
-    void TransitionToGameplay()
+    public void TransitionToGameplay()
     {
-        // Hide menu
-        if (mainPanel != null)
-            mainPanel.SetActive(false);
-
-        // Lock and hide cursor for FPS gameplay
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        HideMenu();
     }
 
     void Update()
@@ -41,6 +34,25 @@ public class RelayUI : MonoBehaviour
             mainPanel.SetActive(!isActive);
             Cursor.lockState = isActive ? CursorLockMode.Locked : CursorLockMode.None;
             Cursor.visible = !isActive;
+
+            Debug.Log($"Cursor: {Cursor.lockState}, visible: {Cursor.visible}");
+            Debug.Log(isActive ? "Hide menu" : "Show menu");
         }
+    }
+
+    private void ShowMenu()
+    {
+        MenuOpen = true;
+        if(mainPanel != null) mainPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    private void HideMenu()
+    {
+        MenuOpen = false;
+        if(mainPanel != null) mainPanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }
