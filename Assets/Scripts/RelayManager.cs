@@ -8,11 +8,13 @@ using Unity.Netcode.Transports.UTP;
 using System.Threading.Tasks;
 using TMPro;
 using Unity.Services.Authentication;
+using UnityEngine.UI;
 
 public class RelayManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI joinCodeText;
     [SerializeField] private TMP_InputField joinCodeInputField;
+    [SerializeField] private TMP_InputField playerNameInputField;
 
     private async void Start()
     {
@@ -41,6 +43,10 @@ public class RelayManager : MonoBehaviour
 
         string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
+
+        PlayerPrefs.SetString("PlayerName", playerNameInputField.text);
+        PlayerPrefs.Save();
+
         return NetworkManager.Singleton.StartHost() ? joinCode : null;
     }
     private async Task<bool> StartClientWithRelay(string joinCode)
@@ -48,6 +54,9 @@ public class RelayManager : MonoBehaviour
         JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
 
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(joinAllocation, "dtls"));
+
+        PlayerPrefs.SetString("PlayerName", playerNameInputField.text);
+        PlayerPrefs.Save();
 
         return !string.IsNullOrEmpty(joinCode) && NetworkManager.Singleton.StartClient();
     }
