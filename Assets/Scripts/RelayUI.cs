@@ -13,6 +13,7 @@ public class RelayUI : MonoBehaviour
     public TMP_InputField joinCodeInput;
     public TMP_Text joinCodeDisplay;
     public GameObject mainPanel; // the whole menu panel
+    public GameObject playerPanel;
     private RelayManager relayManager;
 
     void Start()
