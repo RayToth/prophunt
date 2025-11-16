@@ -39,7 +39,7 @@ public class RelayUI : MonoBehaviour
         {
             bool isActive = mainPanel.activeSelf;
             mainPanel.SetActive(!isActive);
-            Cursor.lockState = isActive ? CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.lockState = isActive ? CursorLockMode.Locked : CursorLockMode.None;
             Cursor.visible = !isActive;
         }
     }

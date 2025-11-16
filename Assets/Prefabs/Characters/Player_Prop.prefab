@@ -352,7 +352,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 60
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2897873309
+  GlobalObjectIdHash: 4132492141
   InScenePlacedSourceGlobalObjectIdHash: 3866616908
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -1047,7 +1047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 1824273208
+  GlobalObjectIdHash: 4132492141
   InScenePlacedSourceGlobalObjectIdHash: 3866616908
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
