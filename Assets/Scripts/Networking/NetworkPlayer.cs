@@ -19,7 +19,7 @@ public class NetworkPlayer : NetworkBehaviour
             return;
         }
 
-        Debug.Log("isowner?: " + IsOwner + " | Name: " + PlayerPrefs.GetString("PlayerName"));
+        Debug.Log("isowner?: " + IsOwner);
         if (IsOwner)
         {
             playerCamera.gameObject.SetActive(true);

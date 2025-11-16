@@ -28,11 +28,22 @@ public class RelayManager : MonoBehaviour
     {
         string joinCode = await StartHostWithRelay();
         joinCodeText.text = joinCode;
+
+        PlayerPrefs.SetString("PlayerName", playerNameInputField.text);
+        PlayerPrefs.Save();
+
+        Debug.Log("Name: " + PlayerPrefs.GetString("PlayerName"));
     }
 
     public async void JoinRelay()
     {
+
+        PlayerPrefs.SetString("PlayerName", playerNameInputField.text);
+        PlayerPrefs.Save();
+
         await StartClientWithRelay(joinCodeInputField.text);
+
+        Debug.Log("Name: " + PlayerPrefs.GetString("PlayerName"));
     }
 
     private async Task<string> StartHostWithRelay(int maxConnections = 3)
@@ -43,10 +54,6 @@ public class RelayManager : MonoBehaviour
 
         string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
-
-        PlayerPrefs.SetString("PlayerName", playerNameInputField.text);
-        PlayerPrefs.Save();
-
         return NetworkManager.Singleton.StartHost() ? joinCode : null;
     }
     private async Task<bool> StartClientWithRelay(string joinCode)
@@ -54,9 +61,6 @@ public class RelayManager : MonoBehaviour
         JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
 
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(joinAllocation, "dtls"));
-
-        PlayerPrefs.SetString("PlayerName", playerNameInputField.text);
-        PlayerPrefs.Save();
 
         return !string.IsNullOrEmpty(joinCode) && NetworkManager.Singleton.StartClient();
     }
