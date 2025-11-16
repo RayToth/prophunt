@@ -7,13 +7,14 @@ using UnityEngine.Timeline;
 
 public class RelayUI : MonoBehaviour
 {
+    public static bool isMenuOpen { get; set; }
+
     [Header("UI Elements")]
     public TMP_InputField joinCodeInput;
     public TMP_Text joinCodeDisplay;
     public GameObject mainPanel; // the whole menu panel
     private RelayManager relayManager;
 
-    public static bool MenuOpen = true;
     void Start()
     {
         ShowMenu();
@@ -32,6 +33,9 @@ public class RelayUI : MonoBehaviour
         {
             bool isActive = mainPanel.activeSelf;
             mainPanel.SetActive(!isActive);
+
+            isMenuOpen = !isMenuOpen;
+
             Cursor.lockState = isActive ? CursorLockMode.Locked : CursorLockMode.None;
             Cursor.visible = !isActive;
 
@@ -42,7 +46,7 @@ public class RelayUI : MonoBehaviour
 
     private void ShowMenu()
     {
-        MenuOpen = true;
+        isMenuOpen = true;
         if(mainPanel != null) mainPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -50,7 +54,7 @@ public class RelayUI : MonoBehaviour
 
     private void HideMenu()
     {
-        MenuOpen = false;
+        isMenuOpen = false;
         if(mainPanel != null) mainPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

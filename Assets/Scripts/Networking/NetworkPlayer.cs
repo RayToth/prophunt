@@ -7,7 +7,6 @@ public class NetworkPlayer : NetworkBehaviour
     public Camera playerCamera;
     public float speed = 6f;
     private CharacterController controller;
-    public static bool MenuOpen = true;
 
     void Start()
     {
@@ -36,11 +35,5 @@ public class NetworkPlayer : NetworkBehaviour
     void Update()
     {
         if (!IsOwner) return;
-
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        Vector3 move = transform.right * h + transform.forward * v;
-        controller.Move(move * speed * Time.deltaTime);
     }
 }

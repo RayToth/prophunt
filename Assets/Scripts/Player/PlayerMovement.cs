@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : NetworkBehaviour
 {
+    [SerializeField]
+    private RelayUI relayUI;
+
     [Header("Movement Settings")]
     public float moveSpeed = 6f;
     public float gravity = -9.81f;
@@ -29,8 +32,11 @@ public class PlayerMovement : NetworkBehaviour
     {
         if (!IsOwner) return;
 
-        Move();
-        Look();
+        if(!RelayUI.isMenuOpen)
+        {
+            Move();
+            Look();
+        }
     }
 
     void Move()
