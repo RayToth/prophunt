@@ -22,6 +22,6 @@ public class EnemyBullet : MonoBehaviour
             player.TakeDamage(damage);
         }
 
-        Destroy(gameObject);
+        Destroy(gameObject); // Destroy bullet
    }
 }
