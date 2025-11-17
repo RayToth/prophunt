@@ -1,15 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
-    public int health = 100;
+    [SerializeField]
+    private int maxHealth = 100;
+    [SerializeField]
+    private int currentHealth;
 
-    void TakeDamage()
+    private void Start()
     {
-        health -= 5;
-        if (health <= 0)
+        currentHealth = maxHealth;
+    }
+
+    public void TakeDamage()
+    {
+        maxHealth -= 5;
+        if (maxHealth <= 0)
             Dead();
     }
 
