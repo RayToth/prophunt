@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7000743097651628897}
   - component: {fileID: 8918584463357131686}
   - component: {fileID: 2202140409217022614}
+  - component: {fileID: 3807838649555486336}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -227,6 +228,29 @@ MonoBehaviour:
   mouseSensitivity: 2
   maxLookAngle: 85
   m_FootstepSounds: []
+--- !u!136 &3807838649555486336
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080813596964920149}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.32700866
+  m_Height: 1.7956116
+  m_Direction: 1
+  m_Center: {x: -0.0015477538, y: -0.10185516, z: 0}
 --- !u!1 &1121149126700145490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1112,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 1
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
