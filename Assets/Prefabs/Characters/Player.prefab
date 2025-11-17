@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 8918584463357131686}
   - component: {fileID: 2202140409217022614}
   - component: {fileID: 3807838649555486336}
-  - component: {fileID: 8799100876004417016}
+  - component: {fileID: 3928403451719980817}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3866616908
+  GlobalObjectIdHash: 3106859173
   InScenePlacedSourceGlobalObjectIdHash: 3866616908
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -253,22 +253,33 @@ CapsuleCollider:
   m_Height: 1.7956116
   m_Direction: 1
   m_Center: {x: -0.0015477538, y: -0.10185516, z: 0}
---- !u!114 &8799100876004417016
-MonoBehaviour:
+--- !u!54 &3928403451719980817
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080813596964920149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a2ec240aae95654282c3d90ea0359e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 90
-  objectTransform: {fileID: 1020447128027094757}
-  cameraTransform: {fileID: 4083905194397851405}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1121149126700145490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 3023678597
+  GlobalObjectIdHash: 3106859173
   InScenePlacedSourceGlobalObjectIdHash: 3866616908
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1

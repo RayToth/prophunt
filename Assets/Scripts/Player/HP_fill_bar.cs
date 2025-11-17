@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HP_fill_bar : MonoBehaviour
 {
-    public PlayerHealth playerHealth;
+    public PlayerHP playerHealth;
     public Image fillImage;
     private Slider slider;
 
@@ -18,7 +18,7 @@ public class HP_fill_bar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float fillvalue = playerHealth.currentHealth / playerHealth.Maxhealth;
+        float fillvalue = playerHealth.currentHealth / playerHealth.maxHealth;
         slider.value = fillvalue;
     }
 }
