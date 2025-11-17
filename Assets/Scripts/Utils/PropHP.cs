@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class PlayerHP : MonoBehaviour
+public class PropHP : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
@@ -28,8 +28,6 @@ public class PlayerHP : MonoBehaviour
     void Die()
     {
         Debug.Log("Játékos meghalt!");
-        Transform target = transform.Find("alive_player_Capsule");
-        if (target != null)
-            Destroy(target.gameObject);
+        Destroy(gameObject);
     }
 }
