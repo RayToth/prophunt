@@ -7,30 +7,47 @@ public class healthBar : MonoBehaviour
 {
     public Slider healthSlider;
     public Slider easeHealthSlider;
-    public float maxHealth = 100f;
-    public float health;
-    public float lerpSpeed = 0.05f;
-    //public PlayerHP playerHP;
+    public PlayerHP playerHP;            // Húzd be az inspectorba, vagy hagyd üresen, akkor FindObjectOfType-ot használunk.
+    public float lerpSpeed = 8f;         // nagyobb = gyorsabb "ease" követés
 
-    // Start is called before the first frame update
     void Start()
     {
-        //playerHP = GetComponent<PlayerHP>();
-        //playerHP = FindObjectOfType<PlayerHP>();
-        maxHealth = health;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(healthSlider.value != health)
+        if (playerHP == null)
         {
-            healthSlider.value = health;
+            playerHP = FindObjectOfType<PlayerHP>(); // ha nem adtad meg az Inspectorban
         }
 
-        if (healthSlider.value != easeHealthSlider.value)
+        if (playerHP == null)
         {
-            easeHealthSlider.value = Mathf.Lerp(easeHealthSlider.value, health, lerpSpeed);
+            Debug.LogWarning("PlayerHP nem található! healthBar nem tud frissíteni.");
+            return;
+        }
+
+        // állítsd be a slider határait a player maxHealth értékére
+        healthSlider.maxValue = playerHP.maxHealth;
+        easeHealthSlider.maxValue = playerHP.maxHealth;
+
+        // kezdeti értékek
+        healthSlider.value = playerHP.currentHealth;
+        easeHealthSlider.value = playerHP.currentHealth;
+    }
+
+    void FixUpdate()
+    {
+        if (playerHP == null) return;
+
+        float target = playerHP.currentHealth;
+
+        // azonnali csík (ha szükséges)
+        if (healthSlider.value != target)
+        {
+            healthSlider.value = target;
+        }
+
+        // "ease" csík sima követése (framefüggetlen)
+        if (!Mathf.Approximately(easeHealthSlider.value, target))
+        {
+            easeHealthSlider.value = Mathf.Lerp(easeHealthSlider.value, target, lerpSpeed * Time.deltaTime);
         }
     }
 }
