@@ -27,7 +27,7 @@ public class PropHP : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Játékos meghalt!");
+        Debug.Log("Tárgy meghalt!");
         Destroy(gameObject);
     }
 }
