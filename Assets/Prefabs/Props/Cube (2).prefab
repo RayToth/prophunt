@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8266470786264208870}
   - component: {fileID: 9045992187648289949}
   - component: {fileID: 3720318847359842006}
-  - component: {fileID: -7386497311285658099}
+  - component: {fileID: 7006561093652727050}
   m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -189,7 +189,7 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &-7386497311285658099
+--- !u!114 &7006561093652727050
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5512815408241811171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5e2b82139e9a0f409015a7b2d462aee, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bce1a96c8882fc48abb34826c1c45bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
@@ -229,9 +229,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7145432391274197989}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7848615904552590985}
@@ -239,9 +239,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 2, y: 2}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4041690709631814773
 Canvas:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ Canvas:
   m_GameObject: {fileID: 7145432391274197989}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &3202165898519243636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 554999978953127198, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 554999978953127198, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: m_AnchorMin.x
@@ -335,7 +335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 554999978953127198, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 554999978953127198, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: m_SizeDelta.x
@@ -401,6 +401,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4803685452733095299, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 721510246
+      objectReference: {fileID: 0}
     - target: {fileID: 4966517663422245361, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: m_Name
       value: Main_HP_bar
@@ -413,6 +417,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7432203297707748587, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
+      propertyPath: playerHP
+      value: 
+      objectReference: {fileID: 7006561093652727050}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

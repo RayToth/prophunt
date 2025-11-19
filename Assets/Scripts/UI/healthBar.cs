@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Netcode;
 
-public class healthBar : MonoBehaviour
+public class healthBar : NetworkBehaviour
 {
     public Slider healthSlider;
     public Slider easeHealthSlider;

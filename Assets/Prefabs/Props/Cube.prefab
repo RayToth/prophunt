@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6546446240922500330}
   - component: {fileID: 8158252591785623132}
   - component: {fileID: 2457599131940918414}
-  - component: {fileID: -5962153464989379286}
+  - component: {fileID: 3353751206214147324}
   m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
@@ -189,7 +189,7 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &-5962153464989379286
+--- !u!114 &3353751206214147324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,11 +198,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1516643677717150395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5e2b82139e9a0f409015a7b2d462aee, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bce1a96c8882fc48abb34826c1c45bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 107
 --- !u!1 &4616803136258423891
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,8 +239,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 547.415, y: 273.5}
-  m_SizeDelta: {x: 1100, y: 548}
+  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7862714721714288053
 Canvas:
@@ -327,7 +327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 554999978953127198, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 554999978953127198, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: m_AnchorMin.x
@@ -335,7 +335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 554999978953127198, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 554999978953127198, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: m_SizeDelta.x
@@ -401,9 +401,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4803685452733095299, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 475573806
+      objectReference: {fileID: 0}
     - target: {fileID: 4966517663422245361, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: m_Name
       value: Main_HP_bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680107762082017670, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
+      propertyPath: m_Value
+      value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 6291297021448292367, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: m_AnchorMax.x
@@ -413,6 +421,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6291297021448292367, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432203297707748587, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
+      propertyPath: playerHP
+      value: 
+      objectReference: {fileID: 3353751206214147324}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
