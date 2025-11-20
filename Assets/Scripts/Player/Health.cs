@@ -24,7 +24,7 @@ public class Health : NetworkBehaviour
     }
 
     // Called by server when the player is hit
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     public void TakeDamageServerRpc(float damage)
     {
         HP.Value = Mathf.Clamp(HP.Value - damage, 0, MaxHealth);
