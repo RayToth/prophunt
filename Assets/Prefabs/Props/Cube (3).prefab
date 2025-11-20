@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 611478422
+  GlobalObjectIdHash: 2764587268
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -403,7 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4803685452733095299, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: GlobalObjectIdHash
-      value: 4129015788
+      value: 2764587268
       objectReference: {fileID: 0}
     - target: {fileID: 4966517663422245361, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
       propertyPath: m_Name
@@ -425,14 +425,50 @@ PrefabInstance:
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 1805654228751880492}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7432203297707748587, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4966517663422245361, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4134095301150008366}
   m_SourcePrefab: {fileID: 100100000, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
+--- !u!1 &1383078555379435867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4966517663422245361, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
+  m_PrefabInstance: {fileID: 6331272855348994218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4134095301150008366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383078555379435867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f6b6f4ce86c574c931afe24043801e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 1805654228751880492}
+  easeHealthSlider: {fileID: 3604955455913959855}
+  playerHP: {fileID: 8120483273214002883}
+  lerpSpeed: 8
 --- !u!114 &1805654228751880492 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5680107762082017670, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
+  m_PrefabInstance: {fileID: 6331272855348994218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3604955455913959855 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7339298377374220549, guid: 7d9c1161a23ba324a913543f85da5aba, type: 3}
   m_PrefabInstance: {fileID: 6331272855348994218}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

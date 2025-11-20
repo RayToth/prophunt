@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
 
-public class healthBar : NetworkBehaviour
+public class HealthBar : NetworkBehaviour
 {
     public Slider healthSlider;
     public Slider easeHealthSlider;
