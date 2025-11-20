@@ -372,7 +372,7 @@ MonoBehaviour:
   HP:
     m_InternalValue: 100
   MaxHealth: 100
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1211740977201327308}
 --- !u!1 &1121149126700145490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1530,7 @@ GameObject:
   - component: {fileID: 2985978998038063808}
   - component: {fileID: 7881202773681199221}
   - component: {fileID: 4317947737976606912}
+  - component: {fileID: 1211740977201327308}
   m_Layer: 5
   m_Name: HPCanvas
   m_TagString: Untagged
@@ -1621,6 +1622,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1211740977201327308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6431424029732250449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a851c0636c4caeb46b3091a2b5b21940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fillImage: {fileID: 5852654389000083899}
 --- !u!1 &7110814341056022424
 GameObject:
   m_ObjectHideFlags: 0
