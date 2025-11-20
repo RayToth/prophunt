@@ -249,7 +249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 554999978953127198}
   - component: {fileID: 4803685452733095299}
-  - component: {fileID: 7432203297707748587}
+  - component: {fileID: 615626877180087105}
   m_Layer: 8
   m_Name: Main_HP_bar
   m_TagString: Untagged
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 16290826
+  GlobalObjectIdHash: 579245342
   InScenePlacedSourceGlobalObjectIdHash: 0
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
@@ -299,7 +299,7 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &7432203297707748587
+--- !u!114 &615626877180087105
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -308,11 +308,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4966517663422245361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75868f6a743e6e9488c3fb5c58e551ba, type: 3}
+  m_Script: {fileID: 11500000, guid: c3f6b6f4ce86c574c931afe24043801e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthSlider: {fileID: 5680107762082017670}
-  easeHealthSlider: {fileID: 7339298377374220549}
+  healthSlider: {fileID: 0}
+  easeHealthSlider: {fileID: 0}
   playerHP: {fileID: 0}
   lerpSpeed: 8
 --- !u!1 &8326474671443750612
