@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-   public int damage = 20;
+   public int damageAmount = 20;
 
 
-   private void OnTriggerEnter(Collider other)
+   private void OnTriggerEnter(Collider collider)
    {
-        PlayerHP player = other.GetComponent<PlayerHP>();
-        if(player != null)
-        {
-            Debug.Log(player.currentHealth);
-        }
+        Health targetPlayerHP = collider.GetComponent<Health>();
 
-        
-
-        if (player != null)
+        if (targetPlayerHP != null)
         {
-            player.TakeDamage(damage);
+            Debug.Log(targetPlayerHP.HP);
+            targetPlayerHP.TakeDamageServerRpc(damageAmount);
         }
 
         Destroy(gameObject); // Destroy bullet
